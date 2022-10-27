@@ -13,7 +13,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css"
+    />
 
     <style>
       html,
@@ -37,13 +40,8 @@
         margin: 20px; */
       }
 
-
-      .search__bar{
-
+      .search__bar {
       }
-      
-
-      
 
       .section__column {
         /* border: 2px solid darkgray; */
@@ -67,11 +65,12 @@
         transform: rotateZ(360deg);
         transition-duration: 5s;
         transform-origin: 20px;
-       
+      }
+      #item-7:hover {
+        transform: rotate(20deg);
       }
 
-
-      .search__bar{
+      .search__bar {
         background-color: #373737 !important;
       }
 
@@ -100,10 +99,9 @@
         color: #eaf1fb;
       }
 
-      #it2{
+      #it2 {
         height: 50px;
         width: 50px;
-
       }
 
       #item-3 {
@@ -124,7 +122,6 @@
         background-color: #1c364f;
         color: #eaf1fb;
       }
-    
 
       #item-5 {
         width: 270px;
@@ -232,6 +229,32 @@
       .img {
         height: 60px;
         width: 65px;
+        position: relative;
+        background-position: center;
+        background-size: contain;
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrjaVxsKfDOmGzFbx764zAcNqhephT6rsUVw&usqp=CAU");
+      }
+      .lamp {
+        height: 60px;
+        width: 65px;
+        position: relative;
+        background-position: center;
+        background-size: contain;
+        background-image: url("https://cdn.shopify.com/s/files/1/1242/9978/products/Beacon-18-Small-Table-Lamp-Walnut-Studio-DUNN_2f9b5ce3-2630-4f91-8299-7a134c29be24_2048x2048.jpg?v=1613754694");
+      }
+      .maple {
+        height: 60px;
+        width: 65px;
+        position: relative;
+        background-position: center;
+        background-size: contain;
+        background-image: url("https://grovemade.imgix.net/https%3A%2F%2Fgrovemade.com%2Fshop-static%2Fshop%2Fvariant%2Fgrovemade-trackpad-tray-maple-galA-A1_76kJQUH.jpg%3F_v%3D1633722387.83?auto=format&ixlib=python-1.1.2&w=1000&s=04049dfda55e4202d32ee7a9f74d03fe");
+      }
+      .circle {
+        position: relative !important;
+        height: 100px;
+        width: 100px;
+        margin: 20px;
       }
 
       .product__details {
@@ -249,25 +272,24 @@
         color: #d4d4d4;
       }
 
-      .tooltip__2{
+      .tooltip__1 {
         cursor: pointer;
-        position: relative;
-        top: 287px;
-        right: 486px;
+        position: absolute;
+        right: -10px;
+        top: -10px;
         font-size: 1.2rem;
         height: 26px;
         width: 26px;
         border-radius: 50%;
         text-align: center;
         color: #686a69;
-        background: #343434; 
+        background: #343434;
       }
-
-      #tooltip__3{
+      .tooltip__2 {
         cursor: pointer;
         position: absolute;
-        top: 290px;
-        right: 200px;
+        right: -10px;
+        top: -10px;
         font-size: 1.2rem;
         height: 26px;
         width: 26px;
@@ -277,7 +299,19 @@
         background: #343434;
       }
 
-
+      #tooltip__3 {
+        cursor: pointer;
+        position: absolute;
+        right: -10px;
+        top: -10px;
+        font-size: 1.2rem;
+        height: 26px;
+        width: 26px;
+        border-radius: 50%;
+        text-align: center;
+        color: #686a69;
+        background: #343434;
+      }
 
       .product__price {
         display: flex;
@@ -285,16 +319,13 @@
         justify-content: end;
         color: #d4d4d4;
         padding: 10px 15px;
-        /* margin: 3.7px; */
       }
 
       .total__checkout {
-        /* border: 2px solid blue; */
         display: flex;
         flex-direction: column;
         justify-content: start;
         align-items: flex-start;
-
         height: 150px;
         width: 100%;
       }
@@ -400,17 +431,38 @@
     <div class="main__Container">
       <div class="coontainer">
         <div class="section__column" id="sec">
-
- <form style="">   
-  <div id="search__bar" class="relative" style="margin: 5px;">
-      <div id="ic" class="flex absolute inset-y-0 left-1 items-center pl-4 pointer-events-none">
-          <svg aria-hidden="true" class="w-6   h- text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-      </div>
-      <input id="in" type="search" id="default-search" class="  pl-10 w-full text-sm " placeholder="Search anything" style="height: 46px;"  >
-      
-      
-  </div>
-</form>
+          <form style="">
+            <div id="search__bar" class="relative" style="margin: 5px">
+              <div
+                id="ic"
+                class="flex absolute inset-y-0 left-1 items-center pl-4 pointer-events-none"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="w-6 h- text-gray-500 dark:text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 26 26"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </div>
+              <input
+                id="in"
+                type="search"
+                id="default-search"
+                class="pl-10 w-full text-sm"
+                placeholder="Search anything"
+                style="height: 46px"
+              />
+            </div>
+          </form>
           <div class="box">
             <div class="item" id="item-1">
               <svg
@@ -429,8 +481,9 @@
               Remove customer
             </div>
             <div class="item" id="item-2">
-              <img id="it2" src="/customer.jpeg">
-              Add custom sale</div>
+              <img id="it2" src="/customer.jpeg" />
+              Add custom sale
+            </div>
             <div class="item" id="item-3">
               <img id="it3" src="/discount icon.png" />
               Add discount
@@ -448,8 +501,9 @@
               Send cart
             </div>
             <div class="item" id="item-6">
-              <img id="it2" src="/custom.jpeg">
-              Ship to customer</div>
+              <img id="it2" src="/custom.jpeg" />
+              Ship to customer
+            </div>
             <div class="item" id="item-7">
               <svg
                 id="it7"
@@ -483,10 +537,9 @@
           <div class="details">
             <div class="product">
               <div class="product__details">
-                <img
-                  class="img"
-                  src="https://cdn.shopify.com/s/files/1/1242/9978/products/Beacon-18-Small-Table-Lamp-Walnut-Studio-DUNN_2f9b5ce3-2630-4f91-8299-7a134c29be24_2048x2048.jpg?v=1613754694"
-                />
+                <div class="lamp">
+                  <span class="tooltip__1">2</span>
+                </div>
                 <p class="product__details__name">Walunt Lamp</p>
               </div>
               <div class="product__price">$198.00</div>
@@ -494,45 +547,42 @@
 
             <div class="product">
               <div class="product__details">
-                <img 
-                  class="img" 
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrjaVxsKfDOmGzFbx764zAcNqhephT6rsUVw&usqp=CAU"
-                  
-                />
-                
-                <div class="product__details__name">Walnut Planter
-                  <span class="tooltip__2">1</span>
+                <div class="">
+                  <div class="img">
+                    <span class="tooltip__2">1</span>
+                  </div>
                 </div>
- 
+
+                <div class="product__details__name">Walnut Planter</div>
               </div>
               <div class="product__price">$29.00</div>
             </div>
 
             <div class="product">
               <div class="product__details">
-                <img
-                  class="img"
-                  src="https://grovemade.imgix.net/https%3A%2F%2Fgrovemade.com%2Fshop-static%2Fshop%2Fvariant%2Fgrovemade-trackpad-tray-maple-galA-A1_76kJQUH.jpg%3F_v%3D1633722387.83?auto=format&ixlib=python-1.1.2&w=1000&s=04049dfda55e4202d32ee7a9f74d03fe"
-                />
-                <div class="product__details__name">Maple Trackpad Tray  
-                  <span id="tooltip__3">2</span>               
+                <div class="maple">
+                  <span id="tooltip__3">2</span>
                 </div>
+                <div class="product__details__name">Maple Trackpad Tray</div>
               </div>
               <div class="product__price">$118.00</div>
             </div>
           </div>
-
           <!-- total checkout -->
-
           <div class="total__checkout">
             <div class="total__checkout__content">
               <div class="total__details">Total</div>
-
               <div class="total__details">$389.85</div>
             </div>
 
             <div class="checkout">
-              <button type="button" class="checko">Checkout</button>
+              <button
+                onclick="checkoutFunc(45, 56)"
+                type="button"
+                class="checko"
+              >
+                Checkout
+              </button>
             </div>
           </div>
         </div>
@@ -579,4 +629,21 @@
       </div>
     </div>
   </body>
+
+  <script>
+    // function checkoutFunc(num1, num2) {
+    //   console.log("Checkout button is clicked.", num1, num2);
+    // }
+
+    var fruitName = "Apple";
+    // let ball = "Tennis";
+    const bat = "Nike";
+
+    const checkoutFunc = (num1, num2) => {
+      var ball = "Tennis";
+      console.log("Checkout button is clicked.", fruitName, bat, ball);
+    };
+
+    console.log("ball as let", ball, );
+  </script>
 </html>
