@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SHO</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
+
+    <style>
+      html,
+      body {
+        background: #0e0e0e;
+        width: 100% !important;
+        margin: 0;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+
+      .coontainer {
+        height: 100%;
+        width: 100%;
+        /* background-color: rgb(19, 16, 16); */
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        /* padding: 5px;
+        margin: 20px; */
+      }
+
+
+      .search__bar{
+
+      }
+      
+
+      
+
+      .section__column {
+        /* border: 2px solid darkgray; */
+        max-width: 650px;
+        margin: 5px;
+      }
+      .item {
+        width: 300px !important;
+        height: 150px;
+        border-radius: 3px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 5px;
+        padding: 5px;
+        font-size: 1.1rem;
+      }
+
+      .item:hover {
+        border-radius: 17px;
+        /* transform: rotateZ(360deg);
+        transition-duration: 5s;
+        transform-origin: 20px; */
+       
+      }
+
+
+      .search__bar{
+        background-color: #373737 !important;
+      }
+
+      .box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+      }
+
+      #item-1 {
+        width: 270px;
+        height: 130px;
+        background-color: #4e2d24;
+        color: #eaf1fb;
+      }
+      #it1 {
+        height: 36px;
+        width: 37px;
+        color: #e98f9b;
+      }
+
+      #item-2 {
+        width: 270px;
+        height: 130px;
+        background-color: #1c364f;
+        color: #eaf1fb;
+      }
+
+      #it2{
+        height: 50px;
+        width: 50px;
+
+      }
+
+      #item-3 {
+        width: 270px;
+        height: 130px;
+        background-color: #2c4337;
+        color: #eaf1fb;
+      }
+      #it3 {
+        height: 45px;
+        width: 45px;
+        color: #6ad89e;
+      }
+
+      #item-4 {
+        width: 270px;
+        height: 130px;
+        background-color: #1c364f;
+        color: #eaf1fb;
+      }
+    
+
+      #item-5 {
+        width: 270px;
+        height: 130px;
+        /* padding: 15px; */
+        background-color: #1c364f;
+        color: #eaf1fb;
+      }
+      .material-icons {
+        color: #5caeee;
+        padding: 5px;
+      }
+
+      #item-6 {
+        width: 270px;
+        height: 130px;
+        background-color: #1c364f;
+        color: #eaf1fb;
+      }
+
+      #item-7 {
+        border: 4px solid #1f4e70;
+        width: 262px;
+        height: 130px;
+        background-color: #0e0e0e;
+      }
+      #it7 {
+        color: #63a2d7;
+        height: 48px;
+        width: 45px;
+        margin: -9px;
+      }
+
+      form {
+        min-width: 400px;
+      }
+
+      .flex_justify_center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      form > input {
+        font-size: 18px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-style: italic;
+        height: 40px;
+        width: 100%;
+        margin: 5px;
+      }
+
+      /* BOX 2 */
+      .button {
+        color: rgb(255, 0, 0);
+        width: 260px;
+        height: 45px;
+        margin: 6px;
+        font-size: larger;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      #bnt {
+        color: blue;
+      }
+
+      .action__btns > button {
+        background: #373737;
+        border: none;
+      }
+
+      .p1 {
+        /* border: 2px solid blue; */
+        height: 111px;
+        width: 100%;
+      }
+
+      .h {
+        padding: 3px;
+        margin: 5px;
+        font-size: x-large;
+        margin: 2px;
+        color: #d4d4d4;
+      }
+
+      .para1 {
+        font-size: larger;
+        padding: 5px;
+        margin: 2px;
+        color: #2e6850;
+      }
+
+      .product {
+        /* border: 2px solid blue; */
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0px;
+        height: 100px;
+        width: 100%;
+        display: flex;
+      }
+
+      .img {
+        height: 60px;
+        width: 65px;
+      }
+
+      .product__details {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: start;
+        margin: 15px;
+        font-size: 1.2rem;
+      }
+
+      .product__details__name {
+        margin: 15px;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: #d4d4d4;
+      }
+
+      .tooltip__2{
+        cursor: pointer;
+        position: relative;
+        top: 287px;
+        right: 486px;
+        font-size: 1.2rem;
+        height: 26px;
+        width: 26px;
+        border-radius: 50%;
+        text-align: center;
+        color: #686a69;
+        background: #343434; 
+      }
+
+      #tooltip__3{
+        cursor: pointer;
+        position: absolute;
+        top: 290px;
+        right: 200px;
+        font-size: 1.2rem;
+        height: 26px;
+        width: 26px;
+        border-radius: 50%;
+        text-align: center;
+        color: #686a69;
+        background: #343434;
+      }
+
+
+
+      .product__price {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        color: #d4d4d4;
+        padding: 10px 15px;
+        /* margin: 3.7px; */
+      }
+
+      .total__checkout {
+        /* border: 2px solid blue; */
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+
+        height: 150px;
+        width: 100%;
+      }
+
+      .total__checkout__content {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 1.2rem;
+      }
+
+      .total__details {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: #d4d4d4;
+        padding: 10px 15px;
+      }
+
+      .total__price {
+        margin: 6px 72px;
+      }
+
+      .total__price > p {
+        margin: 0;
+        color: #d4d4d4;
+      }
+
+      .checkout {
+        width: 100%;
+        height: 52px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      .checkout .checko {
+        width: 97%;
+        margin: auto;
+        height: 50px;
+        background-color: #2e73d1;
+        color: #c2def8;
+        font-size: 1.2rem;
+      }
+
+      #last {
+        height: 30px;
+        max-width: 1300px;
+        margin: auto;
+      }
+
+      #text {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 1.1rem;
+        max-width: 1300px;
+        height: 50px;
+        padding: 0 10px;
+        background-color: #212224;
+      }
+      .home {
+        height: 50px;
+        width: 100%;
+        align-items: center;
+      }
+      .home__text {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        align-items: center;
+        color: #87888a;
+        padding: 2px;
+        margin: 2px;
+      }
+      .alex__text {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        color: #7f8082;
+      }
+      .conn__text {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        align-items: center;
+        color: #9fa0a2;
+      }
+
+      #home__img {
+        color: #636466;
+        padding: 2px;
+      }
+
+      #conn__img {
+        color: #369978;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main__Container">
+      <div class="coontainer">
+        <div class="section__column" id="sec">
+
+ <form style="">   
+  <div id="search__bar" class="relative" style="margin: 5px;">
+      <div id="ic" class="flex absolute inset-y-0 left-1 items-center pl-4 pointer-events-none">
+          <svg aria-hidden="true" class="w-6   h- text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+      </div>
+      <input id="in" type="search" id="default-search" class="  pl-10 w-full text-sm " placeholder="Search anything" style="height: 46px;"  >
+      
+      
+  </div>
+</form>
+          <div class="box">
+            <div class="item" id="item-1">
+              <svg
+                id="it1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="100"
+                fill="currentColor"
+                class="bi bi-person-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M4 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                />
+              </svg>
+              Remove customer
+            </div>
+            <div class="item" id="item-2">
+              <img id="it2" src="/customer.jpeg">
+              Add custom sale</div>
+            <div class="item" id="item-3">
+              <img id="it3" src="/discount icon.png" />
+              Add discount
+            </div>
+            <div class="item" id="item-4">
+              <i
+                id="it4"
+                class="fa fa-file"
+                style="font-size: 36px; color: #4eb4f6; padding: 5px"
+              ></i>
+              Add note
+            </div>
+            <div class="item" id="item-5">
+              <i class="material-icons" style="font-size: 30px">send</i>
+              Send cart
+            </div>
+            <div class="item" id="item-6">
+              <img id="it2" src="/custom.jpeg">
+              Ship to customer</div>
+            <div class="item" id="item-7">
+              <svg
+                id="it7"
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="35"
+                fill="currentColor"
+                class="bi bi-plus"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"
+                />
+              </svg>
+              Add title
+            </div>
+          </div>
+        </div>
+
+        <div class="section__column">
+          <div class="action__btns">
+            <button type="button" class="button">Clear cart</button>
+            <button type="button" class="button" id="bnt">More actions</button>
+          </div>
+
+          <div class="p1">
+            <h3 class="h">Miles fitzsimmons</h3>
+            <p class="para1">Returning customer (14 orders)</p>
+          </div>
+
+          <div class="details">
+            <div class="product">
+              <div class="product__details">
+                <img
+                  class="img"
+                  src="https://cdn.shopify.com/s/files/1/1242/9978/products/Beacon-18-Small-Table-Lamp-Walnut-Studio-DUNN_2f9b5ce3-2630-4f91-8299-7a134c29be24_2048x2048.jpg?v=1613754694"
+                />
+                <p class="product__details__name">Walunt Lamp</p>
+              </div>
+              <div class="product__price">$198.00</div>
+            </div>
+
+            <div class="product">
+              <div class="product__details">
+                <img 
+                  class="img" 
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrjaVxsKfDOmGzFbx764zAcNqhephT6rsUVw&usqp=CAU"
+                  
+                />
+                
+                <div class="product__details__name">Walnut Planter
+                  <span class="tooltip__2">1</span>
+                </div>
+ 
+              </div>
+              <div class="product__price">$29.00</div>
+            </div>
+
+            <div class="product">
+              <div class="product__details">
+                <img
+                  class="img"
+                  src="https://grovemade.imgix.net/https%3A%2F%2Fgrovemade.com%2Fshop-static%2Fshop%2Fvariant%2Fgrovemade-trackpad-tray-maple-galA-A1_76kJQUH.jpg%3F_v%3D1633722387.83?auto=format&ixlib=python-1.1.2&w=1000&s=04049dfda55e4202d32ee7a9f74d03fe"
+                />
+                <div class="product__details__name">Maple Trackpad Tray  
+                  <span id="tooltip__3">2</span>               
+                </div>
+              </div>
+              <div class="product__price">$118.00</div>
+            </div>
+          </div>
+
+          <!-- total checkout -->
+
+          <div class="total__checkout">
+            <div class="total__checkout__content">
+              <div class="total__details">Total</div>
+
+              <div class="total__details">$389.85</div>
+            </div>
+
+            <div class="checkout">
+              <button type="button" class="checko">Checkout</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="last">
+        <div id="text">
+          <p class="home__text">
+            <svg
+              id="home__img"
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="29"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+            Home
+          </p>
+          <p class="alex__text">Alexandra Henderson</p>
+          <p class="conn__text">
+            Connected
+            <svg
+              id="conn__img"
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              fill="currentColor"
+              class="bi bi-record-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 13A5 5 0 1 0 8 3a5 5 0 0 0 0 10z"
+              />
+            </svg>
+          </p>
+        </div>
+        <!-- </button> -->
+      </div>
+    </div>
+  </body>
+</html>
